@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.googlecode.gwt.gwtpages</groupId>
+	<artifactId>gwtpages-gin</artifactId>
+	<version>1.0.x</version>
+	<packaging>jar</packaging>
+	<name>GWT Pages GIN add-on</name>
+
+	<dependencies>
+        <dependency>
+                <groupId>com.googlecode.gwt.gwtpages</groupId>
+                <artifactId>gwtpages</artifactId>
+                <version>1.0.0</version>
+        </dependency>
+		<dependency>
+			<groupId>com.googlecode.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-scm</artifactId>
+				<version>1.0-beta-6</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-manager-plexus</artifactId>
+				<version>1.0</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.scm</groupId>
+				<artifactId>maven-scm-provider-svnexe</artifactId>
+				<version>1.0</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>google.repo</id>
+			<name>googlecode scm</name>
+			<url>scm:svn:https://gwtpages.googlecode.com/svn/repo/maven2</url>
+		</repository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>gwtpages</id>
+			<name>GWT Pages</name>
+			<url>http://gwtpages.googlecode.com/svn/repo/maven2</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+</project>

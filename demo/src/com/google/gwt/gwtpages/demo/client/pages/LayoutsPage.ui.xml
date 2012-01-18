@@ -1,0 +1,49 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:FlowPanel>
+		<g:SimplePanel ui:field="sourceRef"></g:SimplePanel>
+		<g:HTMLPanel>
+			<p>
+				You will notice that the layout of this page is different than the layout of other pages.
+				This is because we are using a composite application presenter (shown <a href="http://code.google.com/p/gwtpages/source/browse/trunk/demo/src/com/google/gwt/gwtpages/demo/client/GWT_Pages_Demo.java">here</a>)
+			</p>
+			<p>
+				The layout for this page was set with our page loader (shown <a href="http://code.google.com/p/gwtpages/source/browse/trunk/demo/src/com/google/gwt/gwtpages/demo/client/loaders/DemoPageLoader.java">here</a>)
+			</p>
+			<p>
+				There are different ways to set the layout token... for example, you could also set it in the
+				page request session.
+			</p>
+			<div class="section">
+				<h3>Page Request Session Layout Directives</h3>
+<pre class="code">
+	private void showStandardLayout() {
+		GotoPageCommand cmd = pages.gotoPage(PageConstants.PAGE_LAYOUTS);
+		cmd.getSession().put(CompositeLayoutApplicationPresenter.PRESENTER_TOKEN_KEY, PageConstants.LAYOUT_DEFAULT);
+		cmd.execute();
+	}
+</pre>
+			<g:Anchor ui:field="standardLayout" styleName="link">Show this page with the standard layout</g:Anchor>
+			<br/>
+<pre class="code">
+	private void showNoLayout() {
+		// you can also use an TokenProvider to determine the layout.  You really wouldn't have the need to use
+		// it here but could use it for your page loader if you didn't want to register a static presenter
+		// token - We'll do it here as an example
+		GotoPageCommand cmd = pages.gotoPage(PageConstants.PAGE_LAYOUTS);
+		cmd.getSession().put(CompositeLayoutApplicationPresenter.TokenProvider.class, new CompositeLayoutApplicationPresenter.TokenProvider() {
+			
+			@Override
+			public String getPresenterToken(LoadedPageContainer page,
+					PageParameters parameters, PageRequestSession session) {
+				return PageConstants.LAYOUT_NONE;
+			}
+		});
+		cmd.execute();
+	}
+</pre>
+				<g:Anchor ui:field="noLayout" styleName="link">Show this page with no layout</g:Anchor>
+			</div>
+		</g:HTMLPanel>
+	</g:FlowPanel>
+</ui:UiBinder>

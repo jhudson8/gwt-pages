@@ -1,0 +1,48 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:FlowPanel>
+		<g:SimplePanel ui:field="sourceRef"></g:SimplePanel>
+		<g:HTMLPanel>
+			<p>
+				GWTMessages allows you to easily add success, warning, info and other types of messages
+				to your application.
+			</p>
+			<p>
+				GWT Pages has a messaging system that you can use called GWT Messages.  This is only
+				used with GWT Pages through a page event handler so it is actually completely decoupled
+				in case you need to use some other type of messaging system.  All messages are cleared
+				(when using the defaule messaging page event handler) whenever you browse to another page.
+			</p>
+			<p>
+				View the source for this page to see how the examples below are implemented.
+			</p>
+			<div class="section">
+				<h3>Success Messages</h3>
+				<g:TextBox ui:field="successMessage" styleName="field-xlong"></g:TextBox>
+				<g:Button ui:field="addSuccessMessage">Add Success Message</g:Button>
+				<g:Button ui:field="clearAndAddSuccessMessage">Clear Messages First</g:Button>
+			</div>
+			<div class="section">
+				<h3>Error Messages</h3>
+				<g:TextBox ui:field="errorMessage" styleName="field-xlong"></g:TextBox>
+				<g:Button ui:field="addErrorMessage">Add Error Message</g:Button>
+				<g:Button ui:field="clearAndAddErrorMessage">Clear Messages First</g:Button>
+				(click on the error message to focus on the widget in error)
+			</div>
+			<div class="section">
+				<h3>Warn Messages</h3>
+				<g:TextBox ui:field="warnMessage" styleName="field-xlong"></g:TextBox>
+				<g:Button ui:field="addWarnMessage">Add Warn Message</g:Button>
+				<g:Button ui:field="clearAndAddWarnMessage">Clear Messages First</g:Button>
+			</div>
+			<div class="section">
+				<h3>Info Messages</h3>
+				<g:TextBox ui:field="infoMessage" styleName="field-xlong"></g:TextBox>
+				<g:Button ui:field="addInfoMessage">Add Info Message</g:Button>
+				<g:Button ui:field="clearAndAddInfoMessage">Clear Messages First</g:Button>
+			</div>
+			<g:Button ui:field="clearMessages">Clear Messages</g:Button>
+		</g:HTMLPanel>
+	</g:FlowPanel>
+</ui:UiBinder>

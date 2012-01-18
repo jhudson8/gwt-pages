@@ -1,0 +1,6 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:SimplePanel>
+		<!-- This is jus to demonstrate the use of the UiBoundWidget -->
+	</g:SimplePanel>
+</ui:UiBinder>

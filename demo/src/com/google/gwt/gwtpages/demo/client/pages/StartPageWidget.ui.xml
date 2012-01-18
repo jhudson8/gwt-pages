@@ -1,0 +1,16 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+		<p>
+			Welcome, this is a demonstration application of some of the most commonly
+			used features of GWT Pages.  This is not all inclusive so you may also
+			want to check out the <a href="http://code.google.com/p/gwtpages/w/list" target="_blank">Wiki</a>
+			or <a href="http://code.google.com/p/gwtpages/downloads/list" target="_blank">download</a> the
+			code and take a look at the API docs.
+		</p>
+		<p>
+			This is still a work in process and many of these pages are not complete so
+			please be patient...
+		</p>
+	</g:HTMLPanel>
+</ui:UiBinder>

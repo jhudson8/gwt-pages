@@ -1,0 +1,6 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+		Sorry, the demo application is a work in progress and this page has not been created yet...
+	</g:HTMLPanel>
+</ui:UiBinder>

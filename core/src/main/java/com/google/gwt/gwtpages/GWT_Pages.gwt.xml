@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gwt_places'>
+	<source path='client' />
+
+	<generate-with class="com.google.gwt.gwtpages.generator.loader.PageLoaderGenerator">
+		<when-type-assignable class="com.google.gwt.gwtpages.client.page.loader.StandardPageLoader" />
+	</generate-with>
+	<generate-with class="com.google.gwt.gwtpages.generator.loader.PageLoaderGenerator">
+		<when-type-assignable class="com.google.gwt.gwtpages.client.page.loader.AsyncPageLoader" />
+	</generate-with>
+	<generate-with class="com.google.gwt.gwtpages.generator.page.UiBoundPageGenerator">
+		<when-type-assignable class="com.google.gwt.gwtpages.client.page.impl.UiBoundPage" />
+	</generate-with>
+	<generate-with class="com.google.gwt.gwtpages.generator.page.UiBoundWidgetGenerator">
+		<when-type-assignable class="com.google.gwt.gwtpages.client.widget.ui.UiBoundWidget" />
+	</generate-with>
+	<generate-with class="com.google.gwt.gwtpages.generator.page.EventBoundPresenterPageGenerator">
+		<when-type-assignable class="com.google.gwt.gwtpages.client.page.impl.EventBoundPresenterPage" />
+	</generate-with>
+</module>

@@ -1,0 +1,11 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	
+	<ui:style>
+	</ui:style>
+	
+	<g:VerticalPanel>
+		<g:Anchor ui:field="javaSource"></g:Anchor>
+		<g:Anchor ui:field="uiXmlSource"></g:Anchor>
+	</g:VerticalPanel>
+</ui:UiBinder>

@@ -1,0 +1,109 @@
+/** Add css rules here for your application. */
+.bodyContent {
+	padding: 8px;	
+}
+.messageContent {
+	margin: 0 8px;
+}
+.menu-item {
+	padding: 2px;
+}
+.right-side-menu-item {
+	padding-left: 14px;
+}
+.menu-item a {
+	text-decoration: none;
+}
+.menu-item a:hover {
+	text-decoration: underline;
+}
+.left-side-menu-item-selected {
+	background: url(images/left-nav-selected.png) right center !important;
+}
+.right-side-menu-item-selected {
+	background: url(images/right-nav-selected.png) left center !important;
+}
+.left-side-menu-item-hover {
+	background: url(images/left-nav-hover.png) right center;
+}
+.right-side-menu-item-hover {
+	background: url(images/right-nav-hover.png) left center;
+}
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.pageTitle {
+	margin-left: 8px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+.section {
+	-moz-border-radius:3px 3px 3px 3px;
+	background-color:#FAFAFA;
+	border:1px solid #CCCCCC;
+	margin-bottom: 8px;
+	padding: 6px;
+}
+
+.section h3 {
+	margin-top: 2px;	
+}
+
+.field-xlong {
+	width: 380px;	
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size:13px;
+}
+
+.source-reference {
+	-moz-border-radius:3px 3px 3px 3px;
+	background-color:#FFF68F;
+	border:1px solid #CCCCCC;
+	margin-bottom: 8px;
+	padding: 6px;	
+}
+
+.source-reference h3 {
+	margin-top: 3px;
+	margin-bottom: 3px;	
+}
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
+	cursor: hand;
+}

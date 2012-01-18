@@ -1,0 +1,128 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:FlowPanel>
+		<g:SimplePanel ui:field="sourceRef"></g:SimplePanel>
+		<g:HTMLPanel>
+			<br/>
+			<div class="section">
+				<h3>Simple Page Navigation</h3>
+				<div class="section-description">
+					This is just a simple example of navigating to pages without any additional parameters.
+				</div>
+				<b>Static Hyperlink:</b>
+				<g:Hyperlink targetHistoryToken="requestInfo">&lt;a href="#requestInfo"&gt;link&lt;/a&gt;</g:Hyperlink>
+				<br/>
+				<b>GWT Pages Code:</b>
+<pre class="code">
+	// or Pages.get() if not using dependency injection
+	pages.gotoPage(PageConstants.PAGE_REQUEST_INFO).execute();
+</pre>				
+				<g:Anchor ui:field="dynamicNavigation1" styleName="link">example link</g:Anchor>
+			</div>
+
+
+
+			<div class="section">
+				<h3>Page Navigation with Ordinal Parameters</h3>
+				<div class="section-description">
+					Of cource you will need to be able to deal with parameters and the examples below show
+					how to deal with static and dynamic parameters which can be accessed as a list.
+					<br/>
+					<br/>
+					The RequestParameters interface has many helper methods for converting parameter data
+					to more meaningful data types.
+				</div>
+				<b>Static Hyperlink:</b> <g:Hyperlink targetHistoryToken="requestInfo">&lt;a href="#requestInfo/param1/param2"&gt;link&lt;/a&gt;</g:Hyperlink>
+				<br/>
+				<b>GWT Pages Code:</b>
+<pre class="code">
+	pages.gotoPage(PageConstants.PAGE_REQUEST_INFO)
+		.addParameter("param1")
+		.addParameter("param2")
+		.execute();
+</pre>
+				<g:Anchor ui:field="dynamicNavigation2" styleName="link">example link</g:Anchor>
+			</div>
+
+
+
+			<div class="section">
+				<h3>Page Navigation with Mapped Parameters</h3>
+				<div class="section-description">
+					You can also set and retrieve parameters using a Map data structure.  However, you can not use both
+					list and map parameter data at the same time.
+				</div>
+				<b>Static Hyperlink:</b> <g:Hyperlink targetHistoryToken="requestInfo">&lt;a href="#requestInfo/&amp;param1=foo&amp;param2=bar"&gt;link&lt;/a&gt;</g:Hyperlink>
+				<br/>
+				<b>GWT Pages Code:</b>
+<pre class="code">
+	pages.gotoPage(PageConstants.PAGE_REQUEST_INFO)
+		.addParameter("param1", "parameters don't have to be strings")
+		.addParameter("aDate", new Date())
+		.addParameter("aBoolean", true)
+		.execute();
+</pre>
+				<g:Anchor ui:field="dynamicNavigation3" styleName="link">example link</g:Anchor>
+			</div>
+
+
+
+			<div class="section">
+				<h3>Page Navigation with Transient Data</h3>
+				<div class="section-description">
+					It is beneficial at time to pass data to the responding page that does not make
+					it to the history token.  You will see a more meaningful example of this when
+					you look at <b>Passing around GotoPageCommand</b>.  This can be done by adding data
+					to the PageRequestSession.
+				</div>
+				<b>GWT Pages Code:</b>
+<pre class="code">
+	PageRequestSession session = new PageRequestSession();
+	session.put("foo", "this will not appear in the history token");
+	pages.gotoPage(PageConstants.PAGE_REQUEST_INFO, session)
+		.addParameter("param1", "you can still add standard parameters")
+		.execute();
+</pre>
+				<g:Anchor ui:field="dynamicNavigation4" styleName="link">example link</g:Anchor>
+			</div>
+
+
+
+			<div class="section">
+				<h3>Page Navigation with Message shown on the next page</h3>
+				<b>GWT Pages Code:</b>
+<pre class="code">
+	PageRequestSession session = new PageRequestSessionWithMessage("This is a success message");
+	pages.gotoPage(PageConstants.PAGE_REQUEST_INFO, session)
+		.addParameter("param1", "bar")
+		.execute();
+</pre>
+				<g:Anchor ui:field="dynamicNavigation5" styleName="link">example link</g:Anchor>
+			</div>
+
+
+
+			<div class="section">
+				<h3>Passing around GotoPageCommand</h3>
+				<div class="section-description">
+					GWT Pages uses the Command pattern for navigating page events.  This is why you see
+					.execute() at the end of all the page navigation code.  This is meaningful if you want
+					to create a page command and execute it at a later time or pass it around in an abstract
+					way.  You can pass these to responding pages when you use the PageRequestSession.
+				</div>
+				<b>GWT Pages Code:</b>
+<pre class="code">
+	PageRequestSession session = new PageRequestSession();
+	session.put(PageConstants.PARAM_BACK_TITLE, "Navigation")
+		.put(PageConstants.PARAM_BACK_COMMAND, GWTPages.get().getLastCommand());
+	pages.gotoPage(PageConstants.PAGE_REQUEST_INFO, session)
+		.addParameter("param1", 12345)
+		.execute();
+</pre>
+				<g:Anchor ui:field="dynamicNavigation6" styleName="link">example link</g:Anchor>
+			</div>
+
+		</g:HTMLPanel>
+	</g:FlowPanel>
+</ui:UiBinder>

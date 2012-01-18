@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gwt_places_gin'>
+	<source path='client' />
+	
+	<inherits name="com.google.gwt.inject.Inject"/>
+
+	<generate-with class="com.google.gwt.gwtpages.gin.generator.loader.GinPageLoaderGenerator">
+		<when-type-assignable class="com.google.gwt.gwtpages.gin.client.page.loader.StandardGinPageLoader" />
+	</generate-with>
+	<generate-with class="com.google.gwt.gwtpages.gin.generator.loader.GinPageLoaderGenerator">
+		<when-type-assignable class="com.google.gwt.gwtpages.gin.client.page.loader.AsyncGinPageLoader" />
+	</generate-with>
+</module>

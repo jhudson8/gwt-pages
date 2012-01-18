@@ -1,0 +1,108 @@
+@url error32Url error32;
+@url warn32Url warn32;
+@url info32Url info32;
+@url success32Url success32;
+@url error16Url error16;
+@url warn16Url warn16;
+@url info16Url info16;
+@url success16Url success16;    
+
+.messages {
+	border: solid 1px #425A70;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+    margin: 4px 0px;
+    padding: 4px;
+    min-height: 24px;
+}
+.multiMessages {
+    background-color: #FAFAFA;
+    background-image: none;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.infoMessages {
+    background-color: #BDE5F8;
+    background-image: info32Url;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.successMessages {
+    background-color: #DFF2BF;
+    background-image: success32Url;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.warnMessages {
+    background-color: #FEEFB3;
+    background-image: warn32Url;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.errorMessages {
+    background-color: #FFBABA;
+    background-image: error32Url;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.message {
+	margin-left: 48px;
+}
+.multiMessages .message {
+	margin-left: 0;	
+}
+.successMessage {
+	color: #4F8A10;
+}
+.multiMessages .successMessage {
+	background-image: success16Url;
+	padding-left: 20px;	
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.infoMessage {
+	color: #00529B;
+}
+.multiMessages .infoMessage {
+	background-image: info16Url;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+    background-position: left center;
+}
+.warnMessage {
+	color: #9F6000;
+}
+.multiMessages .warnMessage {
+	background-image: warn16Url;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+    background-position: left center;
+}
+.errorMessage {
+	color: #D8000C;
+}
+.multiMessages .errorMessage {
+	background-image: error16Url;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+    background-position: left center;
+}
+.errorMessage a {
+	text-decoration: none;
+	color: #D8000C;
+}
+.errorMessage a:hover {
+	text-decoration: underline;
+	color: #D8000C;
+}
